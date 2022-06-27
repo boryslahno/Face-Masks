@@ -1,0 +1,9 @@
+
+.container{
+  max-width: 71.25rem;
+  margin: 0 auto;
+
+  @media (max-width: $landscape-tablets) {
+    max-width: 62.5rem;
+  }
+}

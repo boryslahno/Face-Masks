@@ -1,0 +1,144 @@
+.footer {
+  background-color: $color-light-gray-2;
+
+  &__head {
+    background-color: $color-yellow;
+    padding: 41px 20px;
+
+    @media (max-width: $small-tablets) {
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      height: 100%;
+
+      @media (max-width: 664px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__communicate {
+    display: flex;
+    gap: 15px;
+    @media (max-width: $small-tablets) {
+      width: 250px;
+    }
+  }
+
+  &__vertical-line {
+    height: 52px;
+    @media (max-width: $small-tablets) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    font-size: 1.8rem;
+    color: $color-blue;
+    padding-top: 8px;
+  }
+
+  &__info {
+
+  }
+
+  &__title {
+    font-family: 'Rubik', sans-serif;
+    @include fontConfig(1.25rem, 500, 1.875rem);
+    color: $color-dark-blue;
+  }
+
+  &__contact {
+    @include fontConfig(0.9375rem, 400, 1.25rem);
+    color: $color-dark-blue;
+
+    &:hover {
+      color: $color-light-gray-1;
+    }
+  }
+
+  &__main {
+    padding: 63px 20px 68px 20px;
+
+    @media (max-width: $small-tablets) {
+      padding: 30px 20px 35px 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      @media (max-width: $phones) {
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+    }
+  }
+
+  &__content {
+    @media (max-width: $phones) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__text {
+    max-width: 340px;
+    margin-top: 33px;
+    @include fontConfig(0.9375rem, 400, 1.5rem);
+  }
+
+  &__navigation {
+
+  }
+
+  &__title {
+
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    @include fontConfig(0.9375rem, 400, 1.875rem);
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    i {
+      color: $color-blue;
+    }
+  }
+
+  &__social {
+
+  }
+
+  &__basement {
+    padding: 31px 0;
+    @media (max-width: $small-tablets) {
+      padding: 12px 0;
+    }
+    border-top: 1px solid $color-light-gray-3;
+    text-align: center;
+  }
+
+  &__copyright {
+    @include fontConfig(0.875rem, 400, 1.875rem);
+  }
+}

@@ -1,0 +1,71 @@
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Rubik';
+  font-display: swap;
+  src: url('../fonts/Rubik-Medium.woff') format('woff'),
+  url('../fonts/Rubik-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  font-display: swap;
+  src: url('../fonts/Rubik-Bold.woff') format('woff'),
+  url('../fonts/Rubik-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  src: url('../fonts/OpenSans-Bold.woff') format('woff'),
+  url('../fonts/OpenSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-display: swap;
+  src: url('../fonts/OpenSans-Regular.woff') format('woff'),
+  url('../fonts/OpenSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  @include fontConfig($default-font-size, 400, 1);
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: $default-text-color;
+
+  @media (max-width: $phones) {
+    font-size: 14px;
+  }
+}
+
+.heading {
+  font-family: 'Rubik', sans-serif;
+  color: $default-title-color;
+
+  &-primary {
+    @include fontConfig(4.5rem, 700, 5.125rem);
+    @media (max-width: $phones) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+
+  &-secondary {
+    @include fontConfig(3rem, 700, 3.125rem);
+    @media (max-width: $phones) {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+  }
+}

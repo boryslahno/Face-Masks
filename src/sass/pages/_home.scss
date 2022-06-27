@@ -1,0 +1,729 @@
+/*********************
+Hero
+*********************/
+.hero {
+  background-color: $color-background;
+  padding: 143px 20px 43px 20px;
+
+  @media (max-width: $small-desktop) {
+    padding: 100px 20px 43px 20px;
+  }
+  @media (max-width: $tablets) {
+    padding: 100px 20px 30px 20px;
+  }
+
+  &__image-box {
+    position: absolute;
+    width: 48%;
+    height: 45.5vw;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: 0px 0px 0px 150px;
+    overflow: hidden;
+
+    @media (max-width: $small-desktop) {
+      width: 50%;
+      height: 620px;
+    }
+
+    @media (max-width: $tablets) {
+      width: 100%;
+      height: 550px;
+      border-radius: 0;
+    }
+    @media (max-width: $phones) {
+      height: 480px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, .8);
+
+      @media (max-width: $tablets) {
+        background-color: rgba(255, 255, 255, .9);
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__row {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__content {
+    max-width: 555px;
+    @media (max-width: $landscape-tablets) {
+      max-width: 440px;
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Rubik', sans-serif;
+    @include fontConfig(0.875rem, 500, 1.875rem);
+    color: $color-yellow;
+  }
+
+  &__title {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    @media (max-width: $small-desktop) {
+      margin-top: 15px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $tablets) {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    line-height: 1.5rem;
+    margin-bottom: 54px;
+    @media (max-width: $small-desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button-box {
+    display: flex;
+    gap: 20px;
+
+    .btn:first-of-type {
+      width: 115px;
+      box-shadow: 0px 10px 15px rgba(27, 95, 193, 0.19);
+    }
+
+    .btn:last-of-type {
+      width: 125px;
+    }
+  }
+
+  &__content-img {
+    height: 38vw;
+    width: 27vw;
+    border-radius: 16px 16px 16px 0px;
+    overflow: hidden;
+
+    @media (max-width: $small-desktop) {
+      width: 350px;
+      height: 530px;
+    }
+    @media (max-width: $tablets) {
+      display: none;
+    }
+  }
+
+  &__benefits-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 61px;
+
+    @media (max-width: $tablets) {
+      flex-wrap: wrap;
+      margin-top: 80px;
+    }
+  }
+
+  &__benefit {
+    display: flex;
+    gap: 22px;
+
+    @media (max-width: $tablets) {
+      flex: 0 0 48%;
+    }
+
+    @media (max-width: $phones) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__benefit-icon {
+    font-size: 40px;
+    color: $color-yellow;
+    flex: 0 0 50px;
+  }
+
+  &__benefit-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 200px;
+    height: 100%;
+    @media (max-width: $tablets) {
+      max-width: none;
+      gap: 4px;
+    }
+  }
+
+  &__benefit-title {
+    @include fontConfig(1.25rem, 700, 1.75rem);
+    color: $default-title-color;
+    flex: 1 1 auto;
+    @media (max-width: $tablets) {
+      flex: none;
+    }
+  }
+
+  &__benefit-text {
+    @include fontConfig(0.94rem, 400, 1.375rem);
+  }
+}
+
+/***************
+About
+ **************/
+.about {
+  padding: 80px 20px 381px 20px;
+  position: relative;
+
+  @media (max-width: $tablets) {
+    padding: 40px 20px 310px 20px;
+  }
+
+  .bg-triangle-one {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: 1;
+    width: 40%;
+    height: 79%;
+    @media (max-width: $small-desktop) {
+      height: 50%;
+      top: -4%;
+    }
+    @media (max-width: $tablets) {
+      height: 25%;
+      top: -1.5%;
+    }
+    @media (max-width: $phones) {
+      height: 20%;
+      top: -1.5%;
+    }
+  }
+
+  .bg-triangle-two {
+    position: absolute;
+    bottom: -24%;
+    right: 0;
+    z-index: -1;
+    width: 40%;
+    height: 80%;
+    @media (max-width: $tablets) {
+      height: 25%;
+      bottom: -1%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 47px;
+    margin-bottom: 77px;
+
+    @media (max-width: $tablets) {
+      flex-direction: column;
+      gap: 30px;
+    }
+    @media (max-width: $phones) {
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img {
+    flex: 1 1 50%;
+    min-height: 616px;
+    border-radius: 16px 16px 16px 0px;
+    overflow: hidden;
+
+    @media (max-width: $tablets) {
+      width: 100%;
+      min-height: 0;
+      padding-bottom: 50%;
+
+      &:last-child {
+        order: 1;
+      }
+    }
+
+    @media (max-width: $phones) {
+      padding-bottom: 70%;
+    }
+  }
+
+  &__content {
+    flex: 1 1 50%;
+    @media (max-width: $tablets) {
+      &:first-child {
+        order: 2;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 26px;
+
+    @media (max-width: $phones) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    line-height: 1.875rem;
+  }
+}
+
+/***************
+Information
+***************/
+.info {
+  position: relative;
+  top: -304px;
+  margin-bottom: -304px;
+  padding: 0px 20px 80px 20px;
+
+  @media (max-width: $tablets) {
+    padding: 0px 0px 80px 0px;;
+  }
+  @media (max-width: $tablets) {
+    padding: 0px 0px 30px 0px;;
+  }
+
+  &__row {
+    position: relative;
+    display: flex;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+    @media (max-width: $tablets) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    flex: 0 0 50%;
+    @media (max-width: $tablets) {
+      padding-bottom: 50%;
+    }
+    @media (max-width: $phones) {
+      padding-bottom: 60%;
+    }
+  }
+
+  &__text-block-first {
+    max-width: 285px;
+    padding: 60px 30px 30px 30px;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+
+    @media (max-width: $tablets) {
+      position: static;
+      max-width: none;
+      flex: 0 0 auto;
+      padding: 30px;
+    }
+    @media (max-width: $phones) {
+      padding: 10px;
+    }
+  }
+
+  &__text-block-second {
+    flex: 1 1 50%;
+    padding: 80px 30px 30px 30px;
+    @media (max-width: $tablets) {
+      padding: 30px;
+    }
+
+    @media (max-width: $phones) {
+      padding: 10px;
+    }
+
+    @media (max-width: 400px) {
+      flex-basis: auto;
+    }
+  }
+
+  &__text-block-third {
+    flex: 1 1 50%;
+    padding: 80px 30px 30px 30px;
+    @media (max-width: $tablets) {
+      padding: 30px;
+    }
+    @media (max-width: $phones) {
+      padding: 10px;
+    }
+  }
+
+  &__text-block-fourth {
+    flex: 1 1 100%;
+    min-height: 284px;
+    padding: 45px 40px 49px 38px;
+
+    @media (max-width: $landscape-tablets) {
+      padding: 45px 20px 49px 18px;
+    }
+
+    @media (max-width: $tablets) {
+      padding: 30px 20px 34px 18px;
+    }
+    @media (max-width: $phones) {
+      padding: 15px 10px 18px 10px;
+    }
+  }
+
+  &__content-block {
+    flex: 1 1 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    @include fontConfig(1.25rem, 700, 3.125rem);
+    color: $color-dark-blue;
+  }
+
+  &__communication {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 28px;
+    @media (max-width: $tablets) {
+      justify-content: normal;
+      gap: 20px;
+    }
+    @media (max-width: $phones) {
+      gap: 8px;
+    }
+  }
+
+  &__btn {
+    width: 125px;
+  }
+
+  &__vertical-line {
+    height: 46px;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    @media (max-width: $phones) {
+      gap:8px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    background-color: $color-blue;
+    border-radius: 50%;
+    color: $color-white;
+  }
+
+  &__contact-content {
+
+  }
+
+  &__contact-title {
+    @include fontConfig(0.875rem, 700, 1.5rem);
+    color: $color-blue;
+  }
+
+  &__contact-phone {
+    @include fontConfig(1.5rem, 700, 1.5rem);
+    color: $color-black;
+    @media (max-width: $phones) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/***************
+Certification
+***************/
+.certification {
+  padding: 0px 20px 80px 20px;
+
+  @media (max-width: $tablets) {
+    padding: 0px 20px 40px 20px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 87px;
+
+    @media (max-width: $tablets) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  &__title {
+    @include fontConfig(0.9375rem, 400, 1.5rem);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @media (max-width: $tablets) {
+      flex-direction: column;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      width: 147px;
+      background-color: $color-yellow;
+      @media (max-width: $tablets) {
+        width: 200px;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    gap: 100px;
+
+    @media (max-width: $phones) {
+      gap: 20px;
+    }
+
+    @media (max-width: 370px) {
+      flex-direction: column;
+    }
+  }
+}
+
+/***************
+Reasons
+***************/
+.reasons {
+  padding: 0px 20px 432px 20px;
+
+  &__row {
+    display: flex;
+    gap: 80px;
+
+    @media (max-width: $landscape-tablets) {
+      gap: 40px;
+    }
+
+    @media (max-width: $tablets) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    flex: 0 0 400px;
+    min-height: 630px;
+    border-radius: 16px 16px 16px 0px;
+    overflow: hidden;
+    @media (max-width: $tablets) {
+      min-height: 0;
+      padding-bottom: 50%;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @media (max-width: $phones) {
+      margin-top: -30px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    line-height: 1.875rem;
+    margin-bottom: 40px;
+  }
+
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    @media (max-width: $phones) {
+      gap:14px;
+    }
+  }
+
+  &__reason {
+    flex: 1 1 47%;
+    display: flex;
+    gap: 17px;
+    align-items: flex-start;
+  }
+
+  &__reason-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 56px;
+    min-height: 56px;
+    background-color: $color-blue;
+    border-radius: 50%;
+    color: $color-white;
+    font-size: 1.6rem;
+  }
+
+  &__reason-content {
+
+  }
+
+  &__reason-title {
+    @include fontConfig(1.25rem, 700, 1.75rem);
+    color: $color-dark-blue;
+  }
+
+  &__reason-text {
+    @include fontConfig(0.9375rem, 400, 1.375rem);
+  }
+}
+
+/***************
+Reviews
+***************/
+.reviews {
+  position: relative;
+  top: -340px;
+  margin-bottom: -340px;
+  padding: 0px 20px 90px 20px;
+
+  @media (max-width: $tablets) {
+    padding: 0px 20px 30px 20px;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: auto;
+  }
+
+  &__review {
+    flex: 0 0 350px;
+    padding: 50px 40px;
+    background-color: $color-white;
+    border: 1px solid $color-light-gray-1;
+    border-radius: 20px 20px 20px 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &__mark {
+    display: flex;
+    color: $color-yellow;
+  }
+
+  &__social-icon {
+    color: $color-light-gray-4;
+    font-size: 1.8rem;
+  }
+
+  &__content {
+    @include fontConfig(1rem, 400, 1.5rem);
+    color: $color-dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__info {
+
+  }
+
+  &__name {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+  }
+
+  &__job {
+    font-size: 0.8rem;
+  }
+}
+
+/***************
+Shop now
+***************/
+.shop-now {
+  padding: 0px 20px 120px 20px;
+  text-align: center;
+
+  @media (max-width: $tablets) {
+    padding: 0px 20px 60px 20px;
+  }
+  @media (max-width: $tablets) {
+    padding: 0px 20px 30px 20px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    @media (max-width: $tablets) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    line-height: 1.875rem;
+    max-width: 664px;
+    margin: 0 auto 35px auto;
+    @media (max-width: $tablets) {
+      margin:0 auto 15px auto;
+    }
+  }
+
+  &__btn {
+    width: 115px;
+    box-shadow: 0px 10px 15px rgba(27, 95, 193, 0.19);
+    margin: 0 auto;
+  }
+}

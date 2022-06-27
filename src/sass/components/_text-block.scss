@@ -1,0 +1,21 @@
+
+.text-block {
+  @include fontConfig(0.9375rem, 400, 1.5rem);
+  min-height: 332px;
+
+  @media (max-width: $tablets) {
+    min-height: 0;
+  }
+  &_blue {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+
+  &_white {
+    background-color: $color-white;
+  }
+
+  &_yellow{
+    background-color: $color-yellow;
+  }
+}

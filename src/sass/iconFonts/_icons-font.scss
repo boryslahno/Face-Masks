@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('../icons-font/icons.eot?jto0kx');
+  src:  url('../icons-font/icons.eot?jto0kx#iefix') format('embedded-opentype'),
+    url('../icons-font/icons.ttf?jto0kx') format('truetype'),
+    url('../icons-font/icons.woff?jto0kx') format('woff'),
+    url('../icons-font/icons.svg?jto0kx#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-box:before {
+  content: "\e900";
+}
+.icon-checked:before {
+  content: "\e901";
+}
+.icon-pay:before {
+  content: "\e902";
+}
+.icon-support:before {
+  content: "\e903";
+}
