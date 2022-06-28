@@ -4,8 +4,6 @@ import browserSync from "browser-sync";
 
 const {dest, src} = gulp;
 
-const jsTask = () =>
+export const jsTask = () =>
     src(path.source.js)
         .pipe(dest(path.build.js));
-
-export default jsTask;

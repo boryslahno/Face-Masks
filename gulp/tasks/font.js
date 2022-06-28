@@ -5,7 +5,7 @@ import {path} from "../path.js";
 
 const {src, dest} = gulp;
 
-const font = () =>
+export const font = () =>
     src(`${path.source.fonts}*.ttf`)
         .pipe(fonter({
             formats: ['woff']
@@ -14,5 +14,3 @@ const font = () =>
         .pipe(src(`${path.source.fonts}*.ttf`))
         .pipe(ttf2woff2())
         .pipe(dest(path.build.fonts));
-
-export default font;

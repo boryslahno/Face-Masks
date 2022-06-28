@@ -8,7 +8,8 @@ export const path = Object.freeze({
         js: `${projectFolder}/js/`,
         images: `${projectFolder}/img/`,
         fonts: `${projectFolder}/fonts/`,
-        iconFonts: `${projectFolder}/icons-font/`
+        iconFonts: `${projectFolder}/icons-font/`,
+        manifest:`${projectFolder}/`
     },
     source: {
         html: `${sourceFolder}/*.html`,
@@ -17,6 +18,7 @@ export const path = Object.freeze({
         images: `${sourceFolder}/images/**/*.{png,jpg,jpeg,gif,webp,svg}`,
         fonts: `${sourceFolder}/fonts/`,
         iconFonts: `${sourceFolder}/icons-font/*`,
+        manifest: `${sourceFolder}/manifest.json`
     },
     watch: {
         html: `${sourceFolder}/**/*.html`,

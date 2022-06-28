@@ -115,6 +115,7 @@
     align-items: center;
     gap: 13px;
     @include fontConfig(0.9375rem, 400, 1.875rem);
+    color: $default-text-color;
 
     &:hover {
       color: $color-blue;

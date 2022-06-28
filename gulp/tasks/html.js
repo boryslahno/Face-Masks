@@ -4,9 +4,7 @@ import fileInclude from 'gulp-file-include';
 
 const {dest, src} = gulp;
 
-const html = () =>
+export const html = () =>
     src(path.source.html)
         .pipe(fileInclude())
         .pipe(dest(path.build.html));
-
-export default html;
